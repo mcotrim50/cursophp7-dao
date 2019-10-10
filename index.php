@@ -22,13 +22,13 @@ require_once ("config.php");
 //$search = usuario::search("ro");
 //echo json_encode($search);
 
-//=================Carrega um usuario usando o Login e senha =============================
+//================= Carrega um usuario usando o Login e senha =============================
 
 //$usuario = new usuario();
 //$usuario->login("root","mamae0!");
 //echo $usuario;
 
-//=================Criando um novo usuario =============================
+//================= Criando um novo usuario =============================
 
 //$aluno = new usuario();
 //$aluno->setDeslogin("aluno");
@@ -36,11 +36,17 @@ require_once ("config.php");
 //$aluno->insert();
 //echo $aluno;
 
+//================= Alterar um usuario =============================
+
+//$usuario = new usuario();
+//$usuario->loadbyId(26);
+//$usuario->update("professor","aleluia");
+//echo $usuario;
+
 $usuario = new usuario();
-$usuario->loadbyId(26);
-$usuario->update("professor","aleluia");
+$usuario->loadbyId(25);
+$usuario->delete();
+
 echo $usuario;
-
-
 
 ?>
